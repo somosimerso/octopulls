@@ -5,12 +5,15 @@ branding:
   color: white
   icon: git-merge
 inputs:
-  GITHUB_TOKEN:
+  token:
     description: 'Token to access the GitHub API'
     required: true
-  OPENAI_API_KEY:
+  open-api-key:
     description: 'API key to access the OpenAI API'
     required: false
+  pull-request-number:
+    description: 'Number pull request'
+    required: false
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'build/index.js'
